@@ -1,0 +1,58 @@
+# Weekly catalogue refresh. YouTube's API policies require stored API data to be
+# refreshed regularly; this also drops videos that channels have taken down.
+# Needs the repository secret YOUTUBE_API_KEY. Pushing the result triggers a Vercel deploy.
+name: Sync catalogue
+
+on:
+  schedule:
+    - cron: '30 7 * * 1' # Mondays 07:30 UTC (13:00 IST), after YouTube's daily quota reset
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-catalogue
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Reuse YouTube/AniList responses between runs (the script also expires them after 3 days).
+      - uses: actions/cache@v4
+        with:
+          path: scripts/sync/.cache
+          key: sync-cache-${{ github.run_id }}
+          restore-keys: sync-cache-
+
+      - name: Sync
+        run: npm run sync -- --region=IN --partial
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+      - name: Test the new catalogue
+        run: npm test
+
+      - name: Commit changes
+        run: |
+          # status (not diff) so newly added show files count as changes
+          if [ -z "$(git status --porcelain -- public/data)" ]; then
+            echo "Catalogue unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A public/data
+          git commit -m "Refresh anime catalogue"
+          git push

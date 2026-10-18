@@ -1,0 +1,19 @@
+[
+  { "key": "muse-asia", "name": "Muse Asia", "id": "UCGbshtvS9t-8CW11W7TooQg", "url": "https://www.youtube.com/@MuseAsia", "enabled": true },
+  { "key": "muse-india", "name": "Muse India", "id": "UCYYhAzgWuxPauRXdPpLAX3Q", "url": "https://www.youtube.com/@MuseIndiaChannel", "enabled": true },
+  { "key": "muse-ph", "name": "Muse Philippines", "id": "UC6sKhWSlPSWIh6e4ukisDHQ", "url": "https://www.youtube.com/@MusePhilippines", "enabled": true },
+  { "key": "ani-one-asia", "name": "Ani-One Asia", "id": "UC0wNSTMWIL3qaorLx0jie6A", "url": "https://www.youtube.com/@AniOneAsia", "enabled": true },
+  { "key": "ani-one-ph", "name": "Ani-One PH Collection", "id": "UCKwe-CrlORY6sF8kLsFB5qw", "url": "https://www.youtube.com/@AniOnePHCollection", "enabled": true },
+  { "key": "gundam", "name": "GUNDAM CHANNEL", "id": "UCejtUitnpnf8Be-v5NuDSLw", "url": "https://www.youtube.com/@GundamInfo", "enabled": true },
+  { "key": "toei", "name": "Toei Animation", "id": "UCQYYekTKCb1y12sas08T6gQ", "url": "https://www.youtube.com/@ToeiAnimationOfficial", "enabled": true },
+  { "key": "toho", "name": "TOHO animation", "id": "UC14Yc2Qv92DMuyNRlHvpo2Q", "url": "https://www.youtube.com/@TOHOanimation", "enabled": true },
+  { "key": "kadokawa", "name": "KADOKAWAanime", "id": "UCY5fcqgSrQItPAX_Z5Frmwg", "url": "https://www.youtube.com/@KadokawaAnime", "enabled": true },
+  { "key": "aniplex-usa", "name": "Aniplex USA", "id": "UCDb0peSmF5rLX7BvuTcJfCw", "url": "https://www.youtube.com/@AniplexUSA", "enabled": true },
+  { "key": "crunchyroll", "name": "Crunchyroll", "id": "UC6pGDc4bFGD1_36IKv3FnYg", "url": "https://www.youtube.com/@Crunchyroll", "enabled": true },
+  { "key": "netflix-anime", "name": "Netflix Anime", "id": "UCBSs9x2KzSLhyyA9IKyt4YA", "url": "https://www.youtube.com/@NetflixAnime", "enabled": true },
+  { "key": "retrocrush", "name": "RetroCrush", "id": "UCPZkYpT5XIUou8sV8zk-3jQ", "url": "https://www.youtube.com/@RetroCrush", "enabled": true },
+  { "key": "viz", "name": "VIZ Media", "id": "UCV1da9peoqEwqr45bpTJsbQ", "url": "https://www.youtube.com/@VIZMedia", "enabled": true },
+  { "key": "muse-indonesia", "name": "Muse Indonesia", "id": "UCxxnxya_32jcKj4yN1_kD7A", "url": "https://www.youtube.com/@MuseIndonesia", "enabled": false, "note": "Indonesian subtitles" },
+  { "key": "muse-vietnam", "name": "Muse Việt Nam", "id": "UCott96qGP5ADmsB_yNQMvDA", "url": "https://www.youtube.com/@MuseVietnam", "enabled": false, "note": "Vietnamese subtitles" },
+  { "key": "muse-thailand", "name": "Muse Thailand", "id": "UCn8hjQOnGYR1AZtYYMYP5jQ", "url": "https://www.youtube.com/@MuseThailand", "enabled": false, "note": "Thai subtitles" }
+]
